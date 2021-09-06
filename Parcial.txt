@@ -1,0 +1,61 @@
+<html>
+<canvas id="canvas" style="width:1000; height:800">
+<script>
+function draw() {
+  var canvas = document.getElementById('canvas');
+  if (canvas.getContext) {
+    var ctx = canvas.getContext('2d');
+
+
+    ctx.fillStyle = '#F8431C ';
+    ctx.beginPath();
+    ctx.moveTo(10, 20);
+    ctx.lineTo(50, 20);
+    ctx.lineTo(30, 5);
+    ctx.fill();
+    
+    
+    ctx.fillStyle = '#0BCE06 ';
+    ctx.beginPath();
+    ctx.ellipse(30, 30, 5, 25, Math.PI / 2, 0, 2 * Math.PI);//elipse1
+    ctx.stroke();
+    ctx.fill();
+    
+     ctx.fillStyle = '#0BCE06 ';
+    ctx.beginPath();
+    ctx.ellipse(118, 25, 5, 21.5, Math.PI / 2, 0, 2 * Math.PI);// elipse2
+    ctx.stroke();
+    ctx.fill();
+    
+    ctx.fillStyle = '#F8431C ';
+    ctx.beginPath();
+    ctx.moveTo(95, 25);
+    ctx.lineTo(141, 25);
+    ctx.lineTo(119, 0);
+    ctx.fill();
+    
+  
+       
+    ctx.translate(200,80);
+    ctx.rotate((Math.PI/180) * 25);
+    ctx.translate(-200,-80);
+
+    
+ctx.fillStyle = '#F8431C ';
+    ctx.beginPath();
+    ctx.moveTo(213, 25);
+    ctx.lineTo(167, 25);
+    ctx.lineTo(190, 0);
+    ctx.fill();    
+    
+    ctx.translate(100,40);
+    ctx.rotate((Math.PI/180) * 25);
+    ctx.translate(-100,-40);
+    
+    
+  }
+ 
+}
+draw();
+</script>
+</html>
